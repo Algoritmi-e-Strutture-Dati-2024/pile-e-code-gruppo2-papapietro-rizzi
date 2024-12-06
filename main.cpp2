@@ -13,9 +13,11 @@ class Coda {
 
     /*Rimuove l'elemento in testa alla coda e lo restituisce*/
     T dequeue() {
-        if (isEmpty()) {
-            throw std::out_of_range("Errore: coda vuota.");
-        }
+        if (coda.isEmpty()) {
+            std::cout <<"errore, coda vuota"<<std::end1;
+        } else {
+coda.dequeue();
+};
         T frontElem = lista.leggilista(1); /*Legge l'elemento in testa*/
         lista.canclista(1);               /*Rimuove l'elemento*/
         return frontElem;
@@ -41,9 +43,7 @@ class Coda {
 };
 
 int main() {
-    Coda<int> coda;
-
-    try {
+    Coda<int> coda; 
         coda.enqueue(4);
         coda.enqueue(8);
         coda.enqueue(12);
@@ -58,7 +58,7 @@ int main() {
         std::cout << "Dimensione della coda: " << coda.size() << std::endl; // 1
 
         coda.dequeue(); /*Rimuove l'ultimo elemento*/
-    }
+    
 
     return 0;
 }
