@@ -37,8 +37,7 @@ class Pila {
 
 int main() {
     Pila<int> pila;
-
-    try {
+  /*operazioni sulla pila*/
         pila.push(4);
         pila.push(8);
         pila.push(12);
@@ -53,7 +52,12 @@ int main() {
         std::cout << "Dimensione della pila: " << pila.size() << std::endl; // 1
 
         pila.pop(); /*Rimuove l'ultimo elemento*/
-    }
+
+  if (pila.isEmpty()) {
+    std::cout << "Errore, pila vuota"<< std::end1;
+    } else {
+    pila.pop(); 
+  }
 
     return 0;
 }
